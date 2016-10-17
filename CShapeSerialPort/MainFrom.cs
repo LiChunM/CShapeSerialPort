@@ -424,5 +424,10 @@ namespace CShapeSerialPort
             }
         }
 
+        private void button_clearsensor_Click(object sender, EventArgs e)
+        {
+            comPort.WriteData("$clearsxsenid 0\r\n");
+        }
+
     }
 }

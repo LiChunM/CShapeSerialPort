@@ -89,6 +89,8 @@
             this.debug_on = new System.Windows.Forms.Button();
             this.SetInfo = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button_clearsensor = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -98,7 +100,7 @@
             // btnOpenClose
             // 
             this.btnOpenClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnOpenClose.Location = new System.Drawing.Point(15, 206);
+            this.btnOpenClose.Location = new System.Drawing.Point(15, 191);
             this.btnOpenClose.Name = "btnOpenClose";
             this.btnOpenClose.Size = new System.Drawing.Size(166, 38);
             this.btnOpenClose.TabIndex = 0;
@@ -224,9 +226,9 @@
             this.panel1.Controls.Add(this.comboBoxSJW);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(642, 0);
+            this.panel1.Location = new System.Drawing.Point(646, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(193, 522);
+            this.panel1.Size = new System.Drawing.Size(193, 525);
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -335,7 +337,7 @@
             // buttonshijian
             // 
             this.buttonshijian.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonshijian.Location = new System.Drawing.Point(15, 273);
+            this.buttonshijian.Location = new System.Drawing.Point(15, 276);
             this.buttonshijian.Name = "buttonshijian";
             this.buttonshijian.Size = new System.Drawing.Size(166, 38);
             this.buttonshijian.TabIndex = 18;
@@ -355,7 +357,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(15, 153);
+            this.btnClear.Location = new System.Drawing.Point(15, 235);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(166, 38);
             this.btnClear.TabIndex = 16;
@@ -367,7 +369,7 @@
             // 
             this.checkBoxHEX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxHEX.AutoSize = true;
-            this.checkBoxHEX.Location = new System.Drawing.Point(15, 494);
+            this.checkBoxHEX.Location = new System.Drawing.Point(15, 497);
             this.checkBoxHEX.Name = "checkBoxHEX";
             this.checkBoxHEX.Size = new System.Drawing.Size(120, 16);
             this.checkBoxHEX.TabIndex = 15;
@@ -378,7 +380,7 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(160, 458);
+            this.label6.Location = new System.Drawing.Point(160, 461);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(17, 12);
             this.label6.TabIndex = 14;
@@ -387,7 +389,7 @@
             // txtTime
             // 
             this.txtTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtTime.Location = new System.Drawing.Point(93, 455);
+            this.txtTime.Location = new System.Drawing.Point(93, 458);
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(61, 21);
             this.txtTime.TabIndex = 13;
@@ -397,7 +399,7 @@
             // 
             this.chkBoxSendOntime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.chkBoxSendOntime.AutoSize = true;
-            this.chkBoxSendOntime.Location = new System.Drawing.Point(15, 457);
+            this.chkBoxSendOntime.Location = new System.Drawing.Point(15, 460);
             this.chkBoxSendOntime.Name = "chkBoxSendOntime";
             this.chkBoxSendOntime.Size = new System.Drawing.Size(72, 16);
             this.chkBoxSendOntime.TabIndex = 12;
@@ -412,7 +414,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(642, 522);
+            this.panel2.Size = new System.Drawing.Size(646, 525);
             this.panel2.TabIndex = 12;
             // 
             // groupBox2
@@ -421,7 +423,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(642, 334);
+            this.groupBox2.Size = new System.Drawing.Size(646, 337);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "接收区";
@@ -434,11 +436,13 @@
             this.txtRecv.Location = new System.Drawing.Point(3, 17);
             this.txtRecv.Multiline = true;
             this.txtRecv.Name = "txtRecv";
-            this.txtRecv.Size = new System.Drawing.Size(636, 314);
+            this.txtRecv.Size = new System.Drawing.Size(640, 317);
             this.txtRecv.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button_clearsensor);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.textBoxj);
             this.groupBox1.Controls.Add(this.radioButtonx);
@@ -463,9 +467,9 @@
             this.groupBox1.Controls.Add(this.debug_on);
             this.groupBox1.Controls.Add(this.SetInfo);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox1.Location = new System.Drawing.Point(0, 334);
+            this.groupBox1.Location = new System.Drawing.Point(0, 337);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(642, 188);
+            this.groupBox1.Size = new System.Drawing.Size(646, 188);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "发送区";
@@ -633,9 +637,9 @@
             // 
             // reset
             // 
-            this.reset.Location = new System.Drawing.Point(527, 32);
+            this.reset.Location = new System.Drawing.Point(336, 20);
             this.reset.Name = "reset";
-            this.reset.Size = new System.Drawing.Size(98, 34);
+            this.reset.Size = new System.Drawing.Size(64, 24);
             this.reset.TabIndex = 4;
             this.reset.Text = "设置完成";
             this.reset.UseVisualStyleBackColor = true;
@@ -643,9 +647,9 @@
             // 
             // readall
             // 
-            this.readall.Location = new System.Drawing.Point(399, 32);
+            this.readall.Location = new System.Drawing.Point(256, 20);
             this.readall.Name = "readall";
-            this.readall.Size = new System.Drawing.Size(98, 34);
+            this.readall.Size = new System.Drawing.Size(74, 24);
             this.readall.TabIndex = 3;
             this.readall.Text = "查看所有";
             this.readall.UseVisualStyleBackColor = true;
@@ -653,9 +657,9 @@
             // 
             // debug_off
             // 
-            this.debug_off.Location = new System.Drawing.Point(270, 32);
+            this.debug_off.Location = new System.Drawing.Point(178, 20);
             this.debug_off.Name = "debug_off";
-            this.debug_off.Size = new System.Drawing.Size(97, 34);
+            this.debug_off.Size = new System.Drawing.Size(72, 24);
             this.debug_off.TabIndex = 2;
             this.debug_off.Text = "调试关";
             this.debug_off.UseVisualStyleBackColor = true;
@@ -663,9 +667,9 @@
             // 
             // debug_on
             // 
-            this.debug_on.Location = new System.Drawing.Point(146, 32);
+            this.debug_on.Location = new System.Drawing.Point(108, 20);
             this.debug_on.Name = "debug_on";
-            this.debug_on.Size = new System.Drawing.Size(90, 34);
+            this.debug_on.Size = new System.Drawing.Size(64, 24);
             this.debug_on.TabIndex = 1;
             this.debug_on.Text = "调试开";
             this.debug_on.UseVisualStyleBackColor = true;
@@ -673,9 +677,9 @@
             // 
             // SetInfo
             // 
-            this.SetInfo.Location = new System.Drawing.Point(29, 32);
+            this.SetInfo.Location = new System.Drawing.Point(22, 20);
             this.SetInfo.Name = "SetInfo";
-            this.SetInfo.Size = new System.Drawing.Size(98, 34);
+            this.SetInfo.Size = new System.Drawing.Size(80, 24);
             this.SetInfo.TabIndex = 0;
             this.SetInfo.Text = "配置信息";
             this.SetInfo.UseVisualStyleBackColor = true;
@@ -685,11 +689,30 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button_clearsensor
+            // 
+            this.button_clearsensor.Location = new System.Drawing.Point(406, 20);
+            this.button_clearsensor.Name = "button_clearsensor";
+            this.button_clearsensor.Size = new System.Drawing.Size(101, 24);
+            this.button_clearsensor.TabIndex = 25;
+            this.button_clearsensor.Text = "清空传感器地址";
+            this.button_clearsensor.UseVisualStyleBackColor = true;
+            this.button_clearsensor.Click += new System.EventHandler(this.button_clearsensor_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(520, 20);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 24);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "清空阀门地址";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // MainFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(835, 522);
+            this.ClientSize = new System.Drawing.Size(839, 525);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -769,6 +792,8 @@
         private System.Windows.Forms.TextBox textBoxmiao;
         private System.Windows.Forms.TextBox textBoxfen;
         private System.Windows.Forms.TextBox textBoxshi;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_clearsensor;
 
     }
 }
