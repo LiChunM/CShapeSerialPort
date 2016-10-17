@@ -123,7 +123,7 @@ namespace CShapeSerialPort
             comPort.StopBits = (StopBits)(comboBoxTZW.SelectedIndex);
 
             chkBoxSendOntime.Checked = false;
-            checkBoxHEX.Checked = true;
+            checkBoxHEX.Checked = false;
             txtTime.Text = "200";
             timer.Elapsed += new System.Timers.ElapsedEventHandler(timer_Elapsed);
         }
@@ -373,6 +373,54 @@ namespace CShapeSerialPort
                 {
                     MessageBox.Show("非法的地址!", "提示信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+        }
+        private void buttonjiange_Click(object sender, EventArgs e)
+        {
+            comPort.WriteData("$sethnd " + textBoxj.Text + "\r\n");
+        }
+
+
+
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonshijian_Click(object sender, EventArgs e)
+        {
+            if (textBoxn.Text.Length == 2)
+            {
+                textBoxn.Text = "20" + textBoxn.Text;
+            }
+            comPort.WriteData("$settime " + textBoxn.Text + "-" + textBoxy.Text + "-" + textBoxr.Text + "- " + textBoxshi.Text + ":" + textBoxfen.Text + ":" + textBoxmiao.Text+"\r\n");
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonmoshi_Click(object sender, EventArgs e)
+        {
+            if (radioButtonc.Checked)
+            {
+                comPort.WriteData("$setworkmod 1\r\n");
+            }
+            if (radioButtonx.Checked)
+            {
+                comPort.WriteData("$setworkmod 0\r\n");
             }
         }
 

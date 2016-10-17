@@ -42,6 +42,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxmiao = new System.Windows.Forms.TextBox();
+            this.textBoxfen = new System.Windows.Forms.TextBox();
+            this.textBoxshi = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxr = new System.Windows.Forms.TextBox();
+            this.textBoxy = new System.Windows.Forms.TextBox();
+            this.textBoxn = new System.Windows.Forms.TextBox();
+            this.buttonshijian = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.checkBoxHEX = new System.Windows.Forms.CheckBox();
@@ -52,6 +65,12 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtRecv = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxj = new System.Windows.Forms.TextBox();
+            this.radioButtonx = new System.Windows.Forms.RadioButton();
+            this.radioButtonc = new System.Windows.Forms.RadioButton();
+            this.buttonmoshi = new System.Windows.Forms.Button();
+            this.buttonjiange = new System.Windows.Forms.Button();
             this.textBoxc = new System.Windows.Forms.TextBox();
             this.textBoxf = new System.Windows.Forms.TextBox();
             this.textBoxs = new System.Windows.Forms.TextBox();
@@ -174,6 +193,19 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.textBoxmiao);
+            this.panel1.Controls.Add(this.textBoxfen);
+            this.panel1.Controls.Add(this.textBoxshi);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.textBoxr);
+            this.panel1.Controls.Add(this.textBoxy);
+            this.panel1.Controls.Add(this.textBoxn);
+            this.panel1.Controls.Add(this.buttonshijian);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.checkBoxHEX);
@@ -196,6 +228,120 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(193, 522);
             this.panel1.TabIndex = 11;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(167, 369);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(17, 12);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "秒";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(110, 369);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(17, 12);
+            this.label13.TabIndex = 35;
+            this.label13.Text = "分";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(60, 369);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(17, 12);
+            this.label14.TabIndex = 34;
+            this.label14.Text = "时";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // textBoxmiao
+            // 
+            this.textBoxmiao.Location = new System.Drawing.Point(133, 366);
+            this.textBoxmiao.Name = "textBoxmiao";
+            this.textBoxmiao.Size = new System.Drawing.Size(28, 21);
+            this.textBoxmiao.TabIndex = 33;
+            this.textBoxmiao.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxfen
+            // 
+            this.textBoxfen.Location = new System.Drawing.Point(83, 366);
+            this.textBoxfen.Name = "textBoxfen";
+            this.textBoxfen.Size = new System.Drawing.Size(21, 21);
+            this.textBoxfen.TabIndex = 32;
+            // 
+            // textBoxshi
+            // 
+            this.textBoxshi.Location = new System.Drawing.Point(15, 366);
+            this.textBoxshi.Name = "textBoxshi";
+            this.textBoxshi.Size = new System.Drawing.Size(39, 21);
+            this.textBoxshi.TabIndex = 31;
+            this.textBoxshi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(167, 337);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(17, 12);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "日";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(110, 337);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(17, 12);
+            this.label10.TabIndex = 29;
+            this.label10.Text = "月";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(60, 337);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(17, 12);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "年";
+            // 
+            // textBoxr
+            // 
+            this.textBoxr.Location = new System.Drawing.Point(133, 334);
+            this.textBoxr.Name = "textBoxr";
+            this.textBoxr.Size = new System.Drawing.Size(28, 21);
+            this.textBoxr.TabIndex = 27;
+            this.textBoxr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBoxy
+            // 
+            this.textBoxy.Location = new System.Drawing.Point(83, 334);
+            this.textBoxy.Name = "textBoxy";
+            this.textBoxy.Size = new System.Drawing.Size(21, 21);
+            this.textBoxy.TabIndex = 26;
+            // 
+            // textBoxn
+            // 
+            this.textBoxn.Location = new System.Drawing.Point(15, 334);
+            this.textBoxn.Name = "textBoxn";
+            this.textBoxn.Size = new System.Drawing.Size(39, 21);
+            this.textBoxn.TabIndex = 25;
+            this.textBoxn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // buttonshijian
+            // 
+            this.buttonshijian.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonshijian.Location = new System.Drawing.Point(15, 273);
+            this.buttonshijian.Name = "buttonshijian";
+            this.buttonshijian.Size = new System.Drawing.Size(166, 38);
+            this.buttonshijian.TabIndex = 18;
+            this.buttonshijian.Text = "时间校准";
+            this.buttonshijian.UseVisualStyleBackColor = true;
+            this.buttonshijian.Click += new System.EventHandler(this.buttonshijian_Click);
             // 
             // label7
             // 
@@ -293,6 +439,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.textBoxj);
+            this.groupBox1.Controls.Add(this.radioButtonx);
+            this.groupBox1.Controls.Add(this.radioButtonc);
+            this.groupBox1.Controls.Add(this.buttonmoshi);
+            this.groupBox1.Controls.Add(this.buttonjiange);
             this.groupBox1.Controls.Add(this.textBoxc);
             this.groupBox1.Controls.Add(this.textBoxf);
             this.groupBox1.Controls.Add(this.textBoxs);
@@ -318,30 +470,89 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "发送区";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(594, 86);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(17, 12);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "秒";
+            // 
+            // textBoxj
+            // 
+            this.textBoxj.Location = new System.Drawing.Point(527, 82);
+            this.textBoxj.Name = "textBoxj";
+            this.textBoxj.Size = new System.Drawing.Size(52, 21);
+            this.textBoxj.TabIndex = 23;
+            // 
+            // radioButtonx
+            // 
+            this.radioButtonx.AutoSize = true;
+            this.radioButtonx.Location = new System.Drawing.Point(527, 154);
+            this.radioButtonx.Name = "radioButtonx";
+            this.radioButtonx.Size = new System.Drawing.Size(71, 16);
+            this.radioButtonx.TabIndex = 21;
+            this.radioButtonx.Text = "定时休眠";
+            this.radioButtonx.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonc
+            // 
+            this.radioButtonc.AutoSize = true;
+            this.radioButtonc.Checked = true;
+            this.radioButtonc.Location = new System.Drawing.Point(527, 124);
+            this.radioButtonc.Name = "radioButtonc";
+            this.radioButtonc.Size = new System.Drawing.Size(59, 16);
+            this.radioButtonc.TabIndex = 20;
+            this.radioButtonc.TabStop = true;
+            this.radioButtonc.Text = "长在线";
+            this.radioButtonc.UseVisualStyleBackColor = true;
+            this.radioButtonc.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // buttonmoshi
+            // 
+            this.buttonmoshi.Location = new System.Drawing.Point(425, 124);
+            this.buttonmoshi.Name = "buttonmoshi";
+            this.buttonmoshi.Size = new System.Drawing.Size(72, 28);
+            this.buttonmoshi.TabIndex = 19;
+            this.buttonmoshi.Text = "工作模式";
+            this.buttonmoshi.UseVisualStyleBackColor = true;
+            this.buttonmoshi.Click += new System.EventHandler(this.buttonmoshi_Click);
+            // 
+            // buttonjiange
+            // 
+            this.buttonjiange.Location = new System.Drawing.Point(425, 77);
+            this.buttonjiange.Name = "buttonjiange";
+            this.buttonjiange.Size = new System.Drawing.Size(72, 28);
+            this.buttonjiange.TabIndex = 18;
+            this.buttonjiange.Text = "采集间隔";
+            this.buttonjiange.UseVisualStyleBackColor = true;
+            this.buttonjiange.Click += new System.EventHandler(this.buttonjiange_Click);
+            // 
             // textBoxc
             // 
-            this.textBoxc.Location = new System.Drawing.Point(348, 155);
+            this.textBoxc.Location = new System.Drawing.Point(314, 151);
             this.textBoxc.Name = "textBoxc";
             this.textBoxc.Size = new System.Drawing.Size(76, 21);
             this.textBoxc.TabIndex = 16;
             // 
             // textBoxf
             // 
-            this.textBoxf.Location = new System.Drawing.Point(348, 118);
+            this.textBoxf.Location = new System.Drawing.Point(314, 118);
             this.textBoxf.Name = "textBoxf";
             this.textBoxf.Size = new System.Drawing.Size(100, 21);
             this.textBoxf.TabIndex = 15;
             // 
             // textBoxs
             // 
-            this.textBoxs.Location = new System.Drawing.Point(348, 77);
+            this.textBoxs.Location = new System.Drawing.Point(314, 77);
             this.textBoxs.Name = "textBoxs";
             this.textBoxs.Size = new System.Drawing.Size(76, 21);
             this.textBoxs.TabIndex = 14;
             // 
             // cajiidbut
             // 
-            this.cajiidbut.Location = new System.Drawing.Point(211, 153);
+            this.cajiidbut.Location = new System.Drawing.Point(188, 146);
             this.cajiidbut.Name = "cajiidbut";
             this.cajiidbut.Size = new System.Drawing.Size(120, 28);
             this.cajiidbut.TabIndex = 13;
@@ -351,7 +562,7 @@
             // 
             // famenidbut
             // 
-            this.famenidbut.Location = new System.Drawing.Point(211, 114);
+            this.famenidbut.Location = new System.Drawing.Point(188, 110);
             this.famenidbut.Name = "famenidbut";
             this.famenidbut.Size = new System.Drawing.Size(120, 28);
             this.famenidbut.TabIndex = 12;
@@ -361,7 +572,7 @@
             // 
             // senidbut
             // 
-            this.senidbut.Location = new System.Drawing.Point(211, 72);
+            this.senidbut.Location = new System.Drawing.Point(188, 72);
             this.senidbut.Name = "senidbut";
             this.senidbut.Size = new System.Drawing.Size(120, 28);
             this.senidbut.TabIndex = 11;
@@ -539,6 +750,25 @@
         private System.Windows.Forms.Button cajiidbut;
         private System.Windows.Forms.Button famenidbut;
         private System.Windows.Forms.Button senidbut;
+        private System.Windows.Forms.RadioButton radioButtonx;
+        private System.Windows.Forms.RadioButton radioButtonc;
+        private System.Windows.Forms.Button buttonmoshi;
+        private System.Windows.Forms.Button buttonjiange;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxj;
+        private System.Windows.Forms.Button buttonshijian;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxr;
+        private System.Windows.Forms.TextBox textBoxy;
+        private System.Windows.Forms.TextBox textBoxn;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBoxmiao;
+        private System.Windows.Forms.TextBox textBoxfen;
+        private System.Windows.Forms.TextBox textBoxshi;
 
     }
 }
