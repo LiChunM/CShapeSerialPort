@@ -65,6 +65,15 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtRecv = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox_sn = new System.Windows.Forms.TextBox();
+            this.button_SN = new System.Windows.Forms.Button();
+            this.button_checksen = new System.Windows.Forms.Button();
+            this.button_famenguan = new System.Windows.Forms.Button();
+            this.button_famenkai = new System.Windows.Forms.Button();
+            this.button_famenchongdian = new System.Windows.Forms.Button();
+            this.button_famenjiedong = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button_clearsensor = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxj = new System.Windows.Forms.TextBox();
             this.radioButtonx = new System.Windows.Forms.RadioButton();
@@ -89,8 +98,6 @@
             this.debug_on = new System.Windows.Forms.Button();
             this.SetInfo = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button_clearsensor = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -99,10 +106,10 @@
             // 
             // btnOpenClose
             // 
-            this.btnOpenClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnOpenClose.Location = new System.Drawing.Point(15, 191);
+            this.btnOpenClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnOpenClose.Location = new System.Drawing.Point(19, 252);
             this.btnOpenClose.Name = "btnOpenClose";
-            this.btnOpenClose.Size = new System.Drawing.Size(166, 38);
+            this.btnOpenClose.Size = new System.Drawing.Size(139, 38);
             this.btnOpenClose.TabIndex = 0;
             this.btnOpenClose.Text = "打开串口";
             this.btnOpenClose.UseVisualStyleBackColor = true;
@@ -234,8 +241,9 @@
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(167, 369);
+            this.label12.Location = new System.Drawing.Point(164, 422);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(17, 12);
             this.label12.TabIndex = 36;
@@ -243,17 +251,20 @@
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(110, 369);
+            this.label13.Location = new System.Drawing.Point(107, 422);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(17, 12);
             this.label13.TabIndex = 35;
             this.label13.Text = "分";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(60, 369);
+            this.label14.Location = new System.Drawing.Point(57, 422);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(17, 12);
             this.label14.TabIndex = 34;
@@ -262,7 +273,8 @@
             // 
             // textBoxmiao
             // 
-            this.textBoxmiao.Location = new System.Drawing.Point(133, 366);
+            this.textBoxmiao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxmiao.Location = new System.Drawing.Point(130, 419);
             this.textBoxmiao.Name = "textBoxmiao";
             this.textBoxmiao.Size = new System.Drawing.Size(28, 21);
             this.textBoxmiao.TabIndex = 33;
@@ -270,14 +282,16 @@
             // 
             // textBoxfen
             // 
-            this.textBoxfen.Location = new System.Drawing.Point(83, 366);
+            this.textBoxfen.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxfen.Location = new System.Drawing.Point(80, 419);
             this.textBoxfen.Name = "textBoxfen";
             this.textBoxfen.Size = new System.Drawing.Size(21, 21);
             this.textBoxfen.TabIndex = 32;
             // 
             // textBoxshi
             // 
-            this.textBoxshi.Location = new System.Drawing.Point(15, 366);
+            this.textBoxshi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxshi.Location = new System.Drawing.Point(12, 419);
             this.textBoxshi.Name = "textBoxshi";
             this.textBoxshi.Size = new System.Drawing.Size(39, 21);
             this.textBoxshi.TabIndex = 31;
@@ -285,8 +299,9 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(167, 337);
+            this.label11.Location = new System.Drawing.Point(164, 390);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(17, 12);
             this.label11.TabIndex = 30;
@@ -295,8 +310,9 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(110, 337);
+            this.label10.Location = new System.Drawing.Point(107, 390);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(17, 12);
             this.label10.TabIndex = 29;
@@ -304,8 +320,9 @@
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(60, 337);
+            this.label9.Location = new System.Drawing.Point(57, 390);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(17, 12);
             this.label9.TabIndex = 28;
@@ -313,7 +330,8 @@
             // 
             // textBoxr
             // 
-            this.textBoxr.Location = new System.Drawing.Point(133, 334);
+            this.textBoxr.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxr.Location = new System.Drawing.Point(130, 387);
             this.textBoxr.Name = "textBoxr";
             this.textBoxr.Size = new System.Drawing.Size(28, 21);
             this.textBoxr.TabIndex = 27;
@@ -321,14 +339,16 @@
             // 
             // textBoxy
             // 
-            this.textBoxy.Location = new System.Drawing.Point(83, 334);
+            this.textBoxy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxy.Location = new System.Drawing.Point(80, 387);
             this.textBoxy.Name = "textBoxy";
             this.textBoxy.Size = new System.Drawing.Size(21, 21);
             this.textBoxy.TabIndex = 26;
             // 
             // textBoxn
             // 
-            this.textBoxn.Location = new System.Drawing.Point(15, 334);
+            this.textBoxn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxn.Location = new System.Drawing.Point(12, 387);
             this.textBoxn.Name = "textBoxn";
             this.textBoxn.Size = new System.Drawing.Size(39, 21);
             this.textBoxn.TabIndex = 25;
@@ -336,10 +356,10 @@
             // 
             // buttonshijian
             // 
-            this.buttonshijian.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonshijian.Location = new System.Drawing.Point(15, 276);
+            this.buttonshijian.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonshijian.Location = new System.Drawing.Point(19, 337);
             this.buttonshijian.Name = "buttonshijian";
-            this.buttonshijian.Size = new System.Drawing.Size(166, 38);
+            this.buttonshijian.Size = new System.Drawing.Size(139, 33);
             this.buttonshijian.TabIndex = 18;
             this.buttonshijian.Text = "时间校准";
             this.buttonshijian.UseVisualStyleBackColor = true;
@@ -347,6 +367,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("楷体", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label7.Location = new System.Drawing.Point(38, 211);
@@ -357,9 +378,10 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(15, 235);
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClear.Location = new System.Drawing.Point(19, 296);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(166, 38);
+            this.btnClear.Size = new System.Drawing.Size(139, 38);
             this.btnClear.TabIndex = 16;
             this.btnClear.Text = "清空收区";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -441,6 +463,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox_sn);
+            this.groupBox1.Controls.Add(this.button_SN);
+            this.groupBox1.Controls.Add(this.button_checksen);
+            this.groupBox1.Controls.Add(this.button_famenguan);
+            this.groupBox1.Controls.Add(this.button_famenkai);
+            this.groupBox1.Controls.Add(this.button_famenchongdian);
+            this.groupBox1.Controls.Add(this.button_famenjiedong);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button_clearsensor);
             this.groupBox1.Controls.Add(this.label8);
@@ -473,6 +502,92 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "发送区";
+            // 
+            // textBox_sn
+            // 
+            this.textBox_sn.Location = new System.Drawing.Point(538, 47);
+            this.textBox_sn.Name = "textBox_sn";
+            this.textBox_sn.Size = new System.Drawing.Size(102, 21);
+            this.textBox_sn.TabIndex = 33;
+            // 
+            // button_SN
+            // 
+            this.button_SN.Location = new System.Drawing.Point(452, 47);
+            this.button_SN.Name = "button_SN";
+            this.button_SN.Size = new System.Drawing.Size(80, 24);
+            this.button_SN.TabIndex = 32;
+            this.button_SN.Text = "设备SN";
+            this.button_SN.UseVisualStyleBackColor = true;
+            this.button_SN.Click += new System.EventHandler(this.button_SN_Click);
+            // 
+            // button_checksen
+            // 
+            this.button_checksen.Location = new System.Drawing.Point(366, 47);
+            this.button_checksen.Name = "button_checksen";
+            this.button_checksen.Size = new System.Drawing.Size(80, 24);
+            this.button_checksen.TabIndex = 31;
+            this.button_checksen.Text = "查询传感器";
+            this.button_checksen.UseVisualStyleBackColor = true;
+            this.button_checksen.Click += new System.EventHandler(this.button_checksen_Click);
+            // 
+            // button_famenguan
+            // 
+            this.button_famenguan.Location = new System.Drawing.Point(280, 47);
+            this.button_famenguan.Name = "button_famenguan";
+            this.button_famenguan.Size = new System.Drawing.Size(80, 24);
+            this.button_famenguan.TabIndex = 30;
+            this.button_famenguan.Text = "阀门关";
+            this.button_famenguan.UseVisualStyleBackColor = true;
+            this.button_famenguan.Click += new System.EventHandler(this.button_famenguan_Click);
+            // 
+            // button_famenkai
+            // 
+            this.button_famenkai.Location = new System.Drawing.Point(194, 47);
+            this.button_famenkai.Name = "button_famenkai";
+            this.button_famenkai.Size = new System.Drawing.Size(80, 24);
+            this.button_famenkai.TabIndex = 29;
+            this.button_famenkai.Text = "阀门开";
+            this.button_famenkai.UseVisualStyleBackColor = true;
+            this.button_famenkai.Click += new System.EventHandler(this.button_famenkai_Click);
+            // 
+            // button_famenchongdian
+            // 
+            this.button_famenchongdian.Location = new System.Drawing.Point(108, 47);
+            this.button_famenchongdian.Name = "button_famenchongdian";
+            this.button_famenchongdian.Size = new System.Drawing.Size(80, 24);
+            this.button_famenchongdian.TabIndex = 28;
+            this.button_famenchongdian.Text = "阀门充电";
+            this.button_famenchongdian.UseVisualStyleBackColor = true;
+            this.button_famenchongdian.Click += new System.EventHandler(this.button_famenchongdian_Click);
+            // 
+            // button_famenjiedong
+            // 
+            this.button_famenjiedong.Location = new System.Drawing.Point(22, 47);
+            this.button_famenjiedong.Name = "button_famenjiedong";
+            this.button_famenjiedong.Size = new System.Drawing.Size(80, 24);
+            this.button_famenjiedong.TabIndex = 27;
+            this.button_famenjiedong.Text = "阀门解冻";
+            this.button_famenjiedong.UseVisualStyleBackColor = true;
+            this.button_famenjiedong.Click += new System.EventHandler(this.button_famenjiedong_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(520, 20);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 24);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "清空阀门地址";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button_clearsensor
+            // 
+            this.button_clearsensor.Location = new System.Drawing.Point(406, 20);
+            this.button_clearsensor.Name = "button_clearsensor";
+            this.button_clearsensor.Size = new System.Drawing.Size(101, 24);
+            this.button_clearsensor.TabIndex = 25;
+            this.button_clearsensor.Text = "清空传感器地址";
+            this.button_clearsensor.UseVisualStyleBackColor = true;
+            this.button_clearsensor.Click += new System.EventHandler(this.button_clearsensor_Click);
             // 
             // label8
             // 
@@ -689,25 +804,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button_clearsensor
-            // 
-            this.button_clearsensor.Location = new System.Drawing.Point(406, 20);
-            this.button_clearsensor.Name = "button_clearsensor";
-            this.button_clearsensor.Size = new System.Drawing.Size(101, 24);
-            this.button_clearsensor.TabIndex = 25;
-            this.button_clearsensor.Text = "清空传感器地址";
-            this.button_clearsensor.UseVisualStyleBackColor = true;
-            this.button_clearsensor.Click += new System.EventHandler(this.button_clearsensor_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(520, 20);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 24);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "清空阀门地址";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // MainFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -718,7 +814,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainFrom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ConsDebugTool(V1_0)";
+            this.Text = "DebugTool(V1_0 By:李春茂)";
             this.Load += new System.EventHandler(this.MainFrom_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -794,6 +890,13 @@
         private System.Windows.Forms.TextBox textBoxshi;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button_clearsensor;
+        private System.Windows.Forms.Button button_famenguan;
+        private System.Windows.Forms.Button button_famenkai;
+        private System.Windows.Forms.Button button_famenchongdian;
+        private System.Windows.Forms.Button button_famenjiedong;
+        private System.Windows.Forms.Button button_checksen;
+        private System.Windows.Forms.TextBox textBox_sn;
+        private System.Windows.Forms.Button button_SN;
 
     }
 }

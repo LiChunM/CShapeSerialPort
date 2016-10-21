@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,8 @@ namespace CShapeSerialPort
     public partial class MainFrom : Form
     {
         private SerialPortUtil comPort = new SerialPortUtil();
-
         private System.Timers.Timer timer = new System.Timers.Timer();
+
         public MainFrom()
         {
             InitializeComponent();
@@ -143,7 +144,10 @@ namespace CShapeSerialPort
                    } 
                    else
                    {
-                       this.txtRecv.AppendText(System.Text.Encoding.Default.GetString(e.DataRecv));//输出到主窗口文本控件   
+                       StreamWriter fs3 = new StreamWriter(Application.StartupPath + "\\log.txt", true);
+                       this.txtRecv.AppendText(System.Text.Encoding.Default.GetString(e.DataRecv));//输出到主窗口文本控件 
+                       fs3.Write(System.Text.Encoding.Default.GetString(e.DataRecv));
+                       fs3.Close();
                    }
                }
                )
@@ -377,7 +381,15 @@ namespace CShapeSerialPort
         }
         private void buttonjiange_Click(object sender, EventArgs e)
         {
-            comPort.WriteData("$sethnd " + textBoxj.Text + "\r\n");
+            if (textBoxj.Text == "")
+            {
+                MessageBox.Show("非法的采集时间!", "提示信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                comPort.WriteData("$sethnd " + textBoxj.Text + "\r\n");
+            }
+            
         }
 
 
@@ -429,5 +441,48 @@ namespace CShapeSerialPort
             comPort.WriteData("$clearsxsenid 0\r\n");
         }
 
+        private void button_famenjiedong_Click(object sender, EventArgs e)
+        {
+            comPort.WriteData("$seticealloff\r\n");
+        }
+
+        private void button_famenchongdian_Click(object sender, EventArgs e)
+        {
+            comPort.WriteData("$setchageall\r\n");
+        }
+
+        private void button_famenkai_Click(object sender, EventArgs e)
+        {
+            comPort.WriteData("$setvalvallon\r\n");
+        }
+
+        private void button_famenguan_Click(object sender, EventArgs e)
+        {
+            comPort.WriteData("$setvalvalloff\r\n");
+        }
+
+        private void button_checksen_Click(object sender, EventArgs e)
+        {
+            comPort.WriteData("$checksensordata\r\n");
+        }
+
+        private void button_SN_Click(object sender, EventArgs e)
+        {
+            if (textBox_sn.Text == "")
+            {
+                MessageBox.Show("非法的SN!", "提示信息", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                comPort.WriteData("$setsn " + textBox_sn.Text + "\r\n");
+            }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
